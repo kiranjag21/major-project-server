@@ -8,7 +8,7 @@ var orderRouter = require('./app/routes/pusher/orders');
 const app = express();
 
 var corsOptions = {
-  origin: ["http://localhost:3000", "http://localhost:3001", "https://majorproject-server.onrender.com" ]
+  origin: ["http://localhost:3000", "http://localhost:3001", "https://major-project-v3.vercel.app'" ]
 };
 var users = [];
 var currentCustomer;
