@@ -1,7 +1,7 @@
 module.exports = {
     HOST: "aws.connect.psdb.cloud",
-    USER: "q44osqmkz4bjhdpcdv2j",
-    PASSWORD: "pscale_pw_ojDo60fuh3rVgMP1P4bQEW3xDZwZEDZ8bz5DkFbGZc1",
+    USER: "czk9qxfl6mgqymg8clkf",
+    PASSWORD: "pscale_pw_H6WBexO48GpHFhYrbaSF6Ho2ILCwrSwqJzCYk2bw6wq",
     DB: "food_delivery",
     dialect: "mysql",
     pool: {
