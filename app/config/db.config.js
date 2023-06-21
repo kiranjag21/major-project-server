@@ -1,8 +1,11 @@
+
+require('dotenv').config()
+
 module.exports = {
-    HOST: "aws.connect.psdb.cloud",
-    USER: "czk9qxfl6mgqymg8clkf",
-    PASSWORD: "pscale_pw_H6WBexO48GpHFhYrbaSF6Ho2ILCwrSwqJzCYk2bw6wq",
-    DB: "food_delivery",
+    HOST: process.env.HOST,
+    USER: process.env.USER,
+    PASSWORD: process.env.PASSWORD,
+    DB: process.env.DB,
     dialect: "mysql",
     pool: {
       max: 5,
