@@ -37,7 +37,6 @@ exports.f=async (req,res)=>{
    const email_id=req.body.emailId;
    console.log(email_id);
    const pass=req.body.password;
-   console.log(pass);
   await Users.findOne({ where:{EmailId:email_id}}).then(data=>{
     console.log(data);   
     bcrypt.compare(pass, data.Password, function(err, result) {
@@ -47,9 +46,6 @@ exports.f=async (req,res)=>{
             res.send(data);       
         }
         else{
-            
-            console.log("password dont match");
-            console.log(result);
             res.send('fail');
         }
           });
@@ -58,7 +54,7 @@ exports.f=async (req,res)=>{
 ).catch(err =>{
     if(err)
     {
-        console.log(err);
+      res.send('fail');
     }
 })
 }
