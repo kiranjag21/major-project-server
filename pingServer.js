@@ -1,18 +1,17 @@
-const http = require('http');
-
+const axios = require('axios');
 // Replace these with your server's details
 const serverHost = process.env.ServerHost;
 const serverPort = process.env.PORT || 8082;
 
 // Function to ping your server
 const pingServer = () => {
-  http.get(`${serverHost}:${serverPort}`, (res) => {
-    if (res.statusCode === 200) {
-      console.log(`Server pinged successfully at ${new Date()}`);
-    } else {
-      console.error(`Failed to ping server. Status code: ${res.statusCode}`);
-    }
-  });
+    axios.get('https://majorproject-server.onrender.com/') // Replace with your server's URL
+    .then((response) => {
+      console.log('Ping successful:', response.status);
+    })
+    .catch((error) => {
+      console.error('Ping failed:', error.message);
+    });
 };
 
 module.exports = pingServer;
