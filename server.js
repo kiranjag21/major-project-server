@@ -47,6 +47,7 @@ app.get("/", (req, res) => {
 });
 
 const db = require("./models");
+const pingServer = require("./pingServer");
 db.sequelize.sync();
 require("./routes/user.routes")(app);
 require("./routes/delivery.route")(app);
@@ -62,6 +63,13 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || 8082;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
+
+    // Set the time interval (in milliseconds) for pinging the server (e.g., every 5 minutes)
+    const pingInterval = 1 * 60 * 1000; // 5 minutes
+
+    // Start pinging the server at the specified interval
+    setInterval(pingServer, pingInterval);
+
 });
 
 module.exports = app;
