@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const History = require(process.cwd()+'/app/models/deliveryExecutive/history');
+const History = require(process.cwd()+'/models/deliveryExecutive/history');
 /* GET users listing. */
 
 router.get('/history/:id', function (req, res, next) {
