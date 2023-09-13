@@ -13,5 +13,9 @@ module.exports = {
       acquire: 30000,
       idle: 10000
     },
-    dialectOptions: {},
+    dialectOptions: {
+      ssl: {
+        rejectUnauthorized: true,
+      },
+    },
   };
