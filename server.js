@@ -14,7 +14,7 @@ var users = [];
 var currentCustomer;
 app.set('users', users);
 app.set('currentCustomer', currentCustomer);
-app.use(cors(corsOptions));
+app.use(cors());
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
